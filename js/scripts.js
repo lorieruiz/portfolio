@@ -75,13 +75,6 @@
 		$(this).blur();
 	});
 
-  /*document.addEventListener('DOMContentLoaded', function () {
-    const img = document.querySelector('.zoomable');
-    
-    img.addEventListener('click', function () {
-      img.classList.toggle('zoomed-in');
-    });
-  });*/
 
   // 🔍 Image Lightbox Viewer
     document.addEventListener('DOMContentLoaded', function () {
@@ -108,6 +101,16 @@
             modal.style.display = "none";
         }
     });
+});
+
+
+// Test typing text
+    var typed = new Typed(".typing-text", {
+    strings: ["Lorie Ruiz"],
+    loop: true,
+    typeSpeed: 80,
+    backSpeed: 40,
+    backDelay: 700,
 });
 
 
