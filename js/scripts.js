@@ -75,12 +75,40 @@
 		$(this).blur();
 	});
 
-  document.addEventListener('DOMContentLoaded', function () {
+  /*document.addEventListener('DOMContentLoaded', function () {
     const img = document.querySelector('.zoomable');
     
     img.addEventListener('click', function () {
       img.classList.toggle('zoomed-in');
     });
-  });
+  });*/
+
+  // 🔍 Image Lightbox Viewer
+    document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const images = document.querySelectorAll(".zoomable-img");
+    const closeBtn = document.querySelector(".close-btn");
+
+    if (!modal || !modalImg || !images.length) return;
+
+    images.forEach(img => {
+        img.addEventListener("click", () => {
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        });
+    });
+
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+
 
 })(jQuery);

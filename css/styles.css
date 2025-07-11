@@ -380,11 +380,11 @@ input[type='checkbox'] {
 /*     Navigation     */
 /**********************/
 .navbar {
-	background-color: #24262a;
+	background-color: transparent;
 	font-weight: 600;
 	font-size: 0.875rem;
 	line-height: 0.875rem;
-	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.025);
+	box-shadow: none;
 }
 
 .navbar .navbar-brand {
@@ -398,7 +398,7 @@ input[type='checkbox'] {
 }
 
 .navbar .logo-text {
-	color: #ffffff;
+	color: #35339e;
 	font-weight: 700;
 	font-size: 1.875rem;
 	line-height: 1rem;
@@ -415,7 +415,7 @@ input[type='checkbox'] {
 	padding-left: 1rem;
 	overflow-y: auto;
 	visibility: hidden;
-	background-color: #24262a;
+	background-color: #dd2525;
 	transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
 	transition: transform .3s ease-in-out, visibility .3s ease-in-out;
 	transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
@@ -465,7 +465,7 @@ input[type='checkbox'] {
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
 	border: none;
-	background-color: #24262a;
+	background-color: #3a558b;
 }
 
 .navbar .dropdown-item {
@@ -1190,18 +1190,20 @@ a:hover.back-to-top {
 
 	/* Navigation */
 	.navbar {
-		padding-top: 1.75rem;
-		background-color: transparent;
-		box-shadow: none;
-		transition: all 0.2s;
+  	position: absolute;
+  	top: 1rem;
+  	left: 0;
+  	width: 100%;
+  	background: transparent;
+  	z-index: 1000;
 	}
 
-	.navbar.top-nav-collapse {
+	/* .navbar.top-nav-collapse {
 		padding-top: 0.5rem;
 		padding-top: 0.5rem;
-		background-color: #24262a;
-		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.025);
-	}
+		background-color: transparent;
+		box-shadow: none
+	} */
 
 	.offcanvas-collapse {
 		position: static;
@@ -1376,8 +1378,8 @@ a:hover.back-to-top {
 
 	/* Header */
 	.header {
-		padding-top: 18.25rem;
-		padding-bottom: 17.25rem;
+		padding-top: 13rem;
+		padding-bottom: 14rem;
 	}
 	/* end of header */
 
@@ -1442,14 +1444,40 @@ a:hover.back-to-top {
 }
 /* end of min-width 1200px */
 
-.zoomable {
-  cursor: zoom-in;
-  transition: transform 0.3s ease;
+.zoomable-img {
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.zoomed-in {
-  transform: scale(2);
-  cursor: zoom-out;
-  z-index: 1000;
-  position: relative;
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  padding-top: 5%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.85);
 }
+
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 5px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+

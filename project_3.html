@@ -94,74 +94,35 @@
     <!-- end of basic -->
 
     <!-- Basic -->
-    <div class="ex-basic-1 pt-3 pb-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-10 offset-xl-1">
-                    <h5 class="mb-4">Price Monitoring Table</h5>
-                    <img class="img-fluid mb-5 zoomable" src="images/PricelistTable.PNG" alt="alternative">
-                    <p class="mb-4">This template is built with Power Query to optimize price checking. Opt to view the project by accessing this <a href="https://github.com/lorieruiz/excel-pricing-monitor">link.</a></p>
-                    
-                    <h5 class="mb-4">Automated Price List Generator</h5>
-                    <img class="img-fluid mb-5 zoomable" src="images/PricelistMaker.PNG" alt="alternative">
-                    <p class="mb-4">This project used VBA and Power Query to streamline generating brands' price lists. View the project by accessing this <a href="index.html#projects">link.</a></p>
+<div class="ex-basic-1 pt-3 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                <h5 class="mb-4">Price Monitoring Table</h5>
 
-                    <!--<div class="text-box mb-5">
-                        <h3>Human brain can process entire images that the eye sees for as little as 13 milliseconds - MIT</h3>
-                        <p>Takeaway Quote</p>
-                    </div> end of text-box --> 
+                <!-- CLICKABLE IMAGE -->
+                <img class="img-fluid mb-5 zoomable-img" src="images/PricelistTable.PNG" alt="Excel dashboard preview">
 
-                    <a class="btn-solid-reg mb-5" href="index.html#projects">Back</a>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of basic -->
+                <p class="mb-4">
+                    This template is built with Power Query to optimize price checking.
+                    Opt to view the project by accessing this <a href="https://github.com/lorieruiz/excel-pricing-monitor">link</a>.
+                </p>
+                
+                <h5 class="mb-4">Automated Price List Generator</h5>
 
+                <!-- APPLY SAME CLASS HERE -->
+                <img class="img-fluid mb-5 zoomable-img" src="images/PricelistMaker.PNG" alt="Excel automation project preview">
 
-<!--
-    <div class="footer bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="social-container">
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-twitter fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-pinterest-p fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-instagram fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-youtube fa-stack-1x"></i>
-                            </a>
-                        </span>
-                    </div> end of social-container
-                </div> end of col
-            </div> <!-- end of row
-        </div> <!-- end of container
-    </div> <!-- end of footer
-    <!-- end of footer
--->
+                <p class="mb-4">
+                    This project used VBA and Power Query to streamline generating brands' price lists.
+                    View the project by accessing this <a href="index.html#projects">link</a>.
+                </p>
+
+                <a class="btn-solid-reg mb-5" href="index.html#projects">Back</a>
+            </div>
+        </div>
+    </div>
+</div>
 
  <!-- Copyright -->
     <div class="copyright bg-gray">
@@ -189,5 +150,12 @@
     <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
     <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
+
+    <!-- Lightbox Modal -->
+    <div id="imageModal" class="modal-overlay" style="display: none;">
+        <span class="close-btn" style="position: absolute; top: 20px; right: 30px; font-size: 30px; color: white; cursor: pointer;">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Zoomed image" style="max-width: 90%; max-height: 90%; margin: auto; display: block;">
+    </div>
+
 </body>
 </html>
